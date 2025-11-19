@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VHU Portal - AI Student Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'navy-dark': '#020c1b',
+              'navy': '#0a192f',
+              'navy-light': '#112240',
+              'slate-lightest': '#e6f1ff',
+              'slate-light': '#ccd6f6',
+              'slate': '#8892b0',
+              'slate-dark': '#495670',
+              'accent-yellow': '#fde047', // A slightly brighter yellow
+              'accent-yellow-dark': '#facc15',
+              'accent-cyan': '#22d3ee',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+              'glow-yellow': '0 0 15px rgba(250, 204, 21, 0.4), 0 0 5px rgba(250, 204, 21, 0.3)',
+            },
+            animation: {
+              'page-transition': 'pageTransition 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'spin-slow': 'spin 3s linear infinite',
+            },
+            keyframes: {
+              pageTransition: {
+                '0%': { opacity: '0', transform: 'translateY(15px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-navy font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

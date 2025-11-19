@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
+import { Clock, MapPin, Bot, Users, Code, BrainCircuit } from 'lucide-react';
 
 const weeklySchedule = [
   { day: 'Thứ 2', date: '04/11', classes: [] },
@@ -11,10 +11,11 @@ const weeklySchedule = [
   { day: 'Chủ nhật', date: '10/11', classes: [] },
 ];
 
-const upcomingEvents = [
-    { title: 'Hội thảo AI', date: '15/11/2025 - 9:00 AM', color: 'border-l-accent-yellow' },
-    { title: 'Ngày hội sinh viên', date: '20/11/2025 - 2:00 PM', color: 'border-l-accent-cyan' },
-    { title: 'Cuộc thi Hackathon', date: '25/11/2025 - 8:00 AM', color: 'border-l-pink-400' },
+const timelineEvents = [
+    { title: 'Hội thảo AI', date: '15/11/2025 - 9:00 AM', icon: BrainCircuit, color: 'text-accent-yellow' },
+    { title: 'Học thuật cùng AI', date: '18/11/2025 - 10:00 AM', icon: Bot, color: 'text-accent-cyan' },
+    { title: 'Ngày hội sinh viên', date: '20/11/2025 - 2:00 PM', icon: Users, color: 'text-pink-400' },
+    { title: 'Cuộc thi Hackathon', date: '25/11/2025 - 8:00 AM', icon: Code, color: 'text-green-400' },
 ];
 
 const Schedule: React.FC = () => {
@@ -59,17 +60,21 @@ const Schedule: React.FC = () => {
         </div>
       </div>
       
-      <div className="lg:col-span-1 space-y-4">
-          <h3 className="text-xl font-bold text-slate-lightest">Sự kiện sắp tới</h3>
-          <div className="space-y-4">
-            {upcomingEvents.map(event => (
-                <div key={event.title} className={`bg-navy-light p-4 rounded-lg ${event.color} border border-transparent hover:border-slate-dark transition-all`}>
-                    <p className="font-semibold text-slate-lightest">{event.title}</p>
-                    <p className="text-sm text-slate mb-3">{event.date}</p>
-                    <button className="w-full text-center bg-slate-dark/50 text-accent-yellow font-semibold py-2 rounded-md hover:bg-slate-dark transition-colors text-sm">RSVP</button>
-                </div>
+      <div className="lg:col-span-1 flex flex-col">
+          <h3 className="text-xl font-bold text-slate-lightest mb-4">Sự kiện sắp tới</h3>
+          <ol className="relative border-l-2 border-slate-dark/30 ml-4 flex-grow flex flex-col justify-around">                  
+            {timelineEvents.map((event, index) => (
+                <li className="ml-8" key={index}>            
+                    <span className="absolute flex items-center justify-center w-8 h-8 bg-navy rounded-full -left-4 border-2 border-slate-dark/50 ring-4 ring-navy-light">
+                        <event.icon className={`w-4 h-4 ${event.color}`} />
+                    </span>
+                    <div className="bg-navy-light p-4 rounded-lg border border-slate-dark/30 hover:border-accent-yellow/50 transition-all cursor-pointer">
+                        <h4 className="font-semibold text-slate-lightest">{event.title}</h4>
+                        <p className="text-sm text-slate">{event.date}</p>
+                    </div>
+                </li>
             ))}
-          </div>
+          </ol>
       </div>
     </div>
   );

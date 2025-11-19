@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { User, Cake, BookOpen, Building, Mail, CreditCard, Users, Binary, Clipboard, Thermometer, Sun, Cloud, CloudRain } from 'lucide-react';
 
@@ -5,7 +6,7 @@ const Profile: React.FC = () => {
   const profileData = {
     name: "VÕ VĂN QUỐC BẢO",
     major: "Thương mại điện tử",
-    avatar: "https://i.imgur.com/4DD4B0Q.png",
+    avatar: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiM0RjQ2RTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlciwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiBkeT0iLjA1ZW0iPkI8L3RleHQ+PC9zdmc+",
     studentId: "231A290036",
     dob: "01/01/2005 (Tuổi: 19)",
     class: "23ITTMDT1011",

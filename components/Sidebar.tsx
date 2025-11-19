@@ -13,6 +13,8 @@ const navigation = [
 ];
 
 const Sidebar: React.FC = () => {
+  const userAvatar = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiM0RjQ2RTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlciwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiBkeT0iLjA1ZW0iPkI8L3RleHQ+PC9zdmc+";
+
   return (
     <aside className="w-64 bg-navy-light flex-shrink-0 flex flex-col justify-between p-4 border-r border-slate-dark/20">
       <div>
@@ -52,7 +54,7 @@ const Sidebar: React.FC = () => {
           </div>
 
           <div className="flex items-center p-2 rounded-md hover:bg-slate-dark/40 transition-colors cursor-pointer">
-              <img src="https://i.imgur.com/4DD4B0Q.png" alt="VÕ VĂN QUỐC BẢO" className="w-10 h-10 rounded-full mr-3 border-2 border-slate-dark"/>
+              <img src={userAvatar} alt="VÕ VĂN QUỐC BẢO" className="w-10 h-10 rounded-full mr-3 border-2 border-slate-dark"/>
               <div>
                   <p className="font-semibold text-sm text-slate-lightest">VÕ VĂN QUỐC BẢO</p>
                   <p className="text-xs text-slate">231A290036</p>

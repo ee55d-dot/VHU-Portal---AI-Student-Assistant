@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, CheckCircle, BrainCircuit } from 'lucide-react';
 
@@ -13,6 +14,7 @@ const AiChat: React.FC = () => {
   ]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
+  const aiAvatar = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiMxMTIyNDAiLz48cGF0aCBkPSJNNDAgMzAgQyAyMCA1MCwgMjAgNzAsIDQwIDkwIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iNCIgZmlsbD0ibm9uZSIgLz48cGF0aCBkPSJNNjAgMzAgQyA4MCA1MCwgODAgNzAsIDYwIDkwIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iNCIgZmlsbD0ibm9uZSIgLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIxMCIgc3Ryb2tlPSIjZmRlMDQ3IiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiLz48bGluZSB4MT0iNTAiIHkxPSIzNSIgeDI9IjUwIiB5Mj0iMjUiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSI0IiAvPjxsaW5lIHgxPSI1MCIgeTE9IjY1IiB4Mj0iNTAiIHkyPSI3NSIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjQiIC8+PGxpbmUgeDE9IjM1IiB5MT0iNTAiIHgyPSIyNSIgeTI9IjUwIiBzdHJva2U9IiMyMmQzZWUiIHN0cm9rZS13aWR0aD0iNCIgLz48bGluZSB4MT0iNjUiIHkxPSI1MCIgeDI9Ijc1IiB5Mj0iNTAiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSI0IiAvPjwvc3ZnPg==";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -44,7 +46,7 @@ const AiChat: React.FC = () => {
       <div className="flex-grow p-6 overflow-y-auto space-y-6">
         {messages.map((msg) => (
           <div key={msg.id} className={`flex items-start gap-4 ${msg.sender === 'user' ? 'justify-end' : ''}`}>
-            {msg.sender === 'ai' && <img className="w-10 h-10 rounded-full border-2 border-accent-cyan/50" src="https://i.imgur.com/3B0k6f8.png" alt="AI Avatar"/>}
+            {msg.sender === 'ai' && <img className="w-10 h-10 rounded-full border-2 border-accent-cyan/50" src={aiAvatar} alt="AI Avatar"/>}
             <div className={`flex flex-col max-w-xl leading-1.5 p-4 rounded-xl ${msg.sender === 'user' ? 'bg-accent-yellow text-navy-dark rounded-br-none' : 'bg-navy text-slate-lightest rounded-bl-none'}`}>
               <p className="text-sm font-normal">{msg.text}</p>
             </div>

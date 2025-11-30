@@ -10,9 +10,9 @@ const Profile: React.FC = () => {
     studentId: "231A290036",
     dob: "01/01/2005 (Tuổi: 19)",
     class: "23ITTMDT1011",
-    faculty: "Kinh tế - Quản trị",
+    faculty: "Khoa Công nghệ thông tin",
     gender: "Nam",
-    email: "bao.vg_231a290036@vhu.edu.vn",
+    email: "bao.vhu.edu.vn",
     progress: 25,
     studyYears: "2023-2027"
   };
@@ -87,7 +87,7 @@ const Profile: React.FC = () => {
                 <span className="absolute bottom-2 right-2 block h-5 w-5 rounded-full bg-green-400 border-2 border-navy-light ring-2 ring-green-400"></span>
                 </div>
                 <h2 className="text-xl lg:text-2xl font-bold text-slate-lightest text-center">{profileData.name}</h2>
-                <p className="text-accent-cyan font-medium">{profileData.major}</p>
+                <p className="text-accent-cyan font-medium whitespace-nowrap">{profileData.major}</p>
                 <div className="w-full mt-8">
                     <div className="flex justify-between mb-1 text-sm">
                         <span className="text-slate">Tiến độ học tập ({profileData.studyYears})</span>
@@ -108,7 +108,7 @@ const Profile: React.FC = () => {
                             <div className="min-w-0">
                                 <p className="text-sm text-slate">{item.label}</p>
                                 <div className="flex items-center">
-                                    <p className="text-base font-semibold text-slate-lightest break-all">{item.value}</p>
+                                    <p className="text-base font-semibold text-slate-lightest whitespace-nowrap">{item.value}</p>
                                     {item.copyable && (
                                         <button onClick={() => copyToClipboard(item.value)} title="Copy" className="ml-2 text-slate hover:text-accent-yellow transition-colors flex-shrink-0">
                                             <Clipboard size={16}/>

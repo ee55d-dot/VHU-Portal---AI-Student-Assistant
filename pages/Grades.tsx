@@ -14,7 +14,7 @@ const Grades: React.FC = () => {
     const [activeTab, setActiveTab] = useState('year');
 
     const renderByYear = () => (
-        <div className="bg-navy p-6 rounded-lg border border-slate-dark/30">
+        <div className="bg-navy p-6 rounded-lg">
             <h3 className="text-lg font-bold text-slate-lightest mb-4">Điểm trung bình các học kỳ</h3>
             <div style={{ width: '100%', height: 300 }}>
                 <ResponsiveContainer>
@@ -34,7 +34,7 @@ const Grades: React.FC = () => {
     );
 
     const renderBySemester = () => (
-        <div className="bg-navy p-6 rounded-lg border border-slate-dark/30 flex flex-col items-center">
+        <div className="bg-navy p-6 rounded-lg flex flex-col items-center">
             <h3 className="text-lg font-bold text-slate-lightest mb-4">Điểm trung bình Học kỳ 2 (2023-2024)</h3>
             <div className="relative" style={{ width: 300, height: 300 }}>
                 <ResponsiveContainer>
@@ -44,7 +44,6 @@ const Grades: React.FC = () => {
                         data={radialData}
                         startAngle={90}
                         endAngle={-270}
-                        barSize={30}
                     >
                         <PolarAngleAxis
                             type="number"
@@ -58,6 +57,7 @@ const Grades: React.FC = () => {
                             angleAxisId={0}
                             fill="#fde047"
                             cornerRadius={15}
+                            barSize={30}
                         />
                     </RadialBarChart>
                 </ResponsiveContainer>

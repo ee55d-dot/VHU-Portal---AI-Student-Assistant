@@ -36,8 +36,8 @@ const AiChat: React.FC = () => {
   };
 
   return (
-    <div className="p-6 lg:p-8 animate-page-transition h-full">
-        <div className="bg-navy-light border border-slate-dark/30 rounded-lg h-full flex flex-col">
+    <div className="animate-page-transition h-full">
+        <div className="bg-navy border border-slate-dark/30 rounded-lg h-full flex flex-col">
           <div className="p-4 border-b border-slate-dark/30 flex items-center justify-center text-center flex-col">
             <BrainCircuit className="w-12 h-12 text-accent-yellow mb-2" />
             <h2 className="text-xl font-bold text-slate-lightest">Trợ lý AI</h2>
@@ -48,7 +48,7 @@ const AiChat: React.FC = () => {
             {messages.map((msg) => (
               <div key={msg.id} className={`flex items-start gap-4 ${msg.sender === 'user' ? 'justify-end' : ''}`}>
                 {msg.sender === 'ai' && <img className="w-10 h-10 rounded-full border-2 border-accent-cyan/50" src={aiAvatar} alt="AI Avatar"/>}
-                <div className={`flex flex-col max-w-xl leading-1.5 p-4 rounded-xl ${msg.sender === 'user' ? 'bg-accent-yellow text-navy-dark rounded-br-none' : 'bg-navy text-slate-lightest rounded-bl-none'}`}>
+                <div className={`flex flex-col max-w-xl leading-1.5 p-4 rounded-xl ${msg.sender === 'user' ? 'bg-accent-yellow text-navy-dark rounded-br-none' : 'bg-navy-dark text-slate-lightest rounded-bl-none'}`}>
                   <p className="text-sm font-normal">{msg.text}</p>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const AiChat: React.FC = () => {
           </div>
 
           <div className="p-4 border-t border-slate-dark/30">
-            <div className="bg-navy p-2 rounded-lg flex items-center gap-2">
+            <div className="bg-navy-dark p-2 rounded-lg flex items-center gap-2">
                 <input
                   type="text"
                   value={input}

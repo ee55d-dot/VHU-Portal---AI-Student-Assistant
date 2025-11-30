@@ -3,7 +3,6 @@ import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import AiAssistantPanel from './components/AiAssistantPanel';
-import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Schedule from './pages/Schedule';
@@ -18,9 +17,8 @@ const App: React.FC = () => {
       <div className="flex h-screen bg-navy text-slate-light overflow-hidden">
         <Sidebar />
         <div className="flex-1 flex min-w-0"> {/* Wrapper for main content and AI panel */}
-          <div className="flex-grow flex flex-col h-screen overflow-y-auto no-scrollbar">
-            <Header />
-            <main className="flex-grow">
+          <div className="flex-grow flex flex-col min-w-0 my-4 ml-4 rounded-2xl bg-navy-light overflow-hidden">
+            <main className="flex-grow overflow-y-auto no-scrollbar p-6 lg:p-8">
               <Routes>
                 <Route path="/" element={<Navigate to="/profile" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />

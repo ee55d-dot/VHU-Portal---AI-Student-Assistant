@@ -41,7 +41,7 @@ const curriculum = [
 
 const Dashboard: React.FC = () => {
     return (
-        <div className="p-6 lg:p-8 space-y-10 animate-page-transition">
+        <div className="space-y-10 animate-page-transition">
             <div>
                 <h2 className="text-2xl font-bold text-slate-lightest mb-1">Chào mừng trở lại, BẢO!</h2>
                 <p className="text-slate">Đây là những gợi ý đăng ký học phần dành riêng cho bạn.</p>
@@ -51,7 +51,7 @@ const Dashboard: React.FC = () => {
                 <h3 className="text-xl font-semibold text-accent-yellow">Gợi ý tương thích nhất</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {suggestedCourses.map((course, index) => (
-                        <div key={index} className="bg-navy-light p-6 rounded-lg border border-slate-dark/30 hover:border-accent-yellow/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div key={index} className="bg-navy p-6 rounded-lg border border-slate-dark/30 hover:border-accent-yellow/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
                             <div>
                                 <div className="flex justify-between items-start mb-3">
                                     <h4 className="text-lg font-bold text-slate-lightest w-4/5">{course.title}</h4>
@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
 
             <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-accent-yellow">Chương trình đào tạo (Môn học tương đương)</h3>
-                <div className="bg-navy-light rounded-lg border border-slate-dark/30">
+                <div className="bg-navy rounded-lg border border-slate-dark/30">
                     <ul className="divide-y divide-slate-dark/30">
                         {curriculum.map((item, index) => (
                             <li key={item.code} className="p-4 flex justify-between items-center hover:bg-slate-dark/20 transition-colors">

@@ -39,7 +39,7 @@ const BehaviorScore: React.FC = () => {
     const [activeTab, setActiveTab] = useState('personal');
 
     return (
-        <div className="animate-page-transition p-6 lg:p-8">
+        <div className="animate-page-transition">
             <div className="flex justify-between items-center mb-6">
                 <div className="flex border-b-2 border-slate-dark/20">
                     <button 
@@ -54,14 +54,14 @@ const BehaviorScore: React.FC = () => {
             <div className="flex items-center space-x-4 mb-6">
                 <div className="flex-1">
                     <label htmlFor="year" className="block text-xs text-slate mb-1">Năm học</label>
-                    <select id="year" className="w-full bg-navy-light border border-slate-dark/50 rounded-md p-2 text-sm text-slate-lightest focus:outline-none focus:ring-2 focus:ring-accent-yellow/80">
+                    <select id="year" className="w-full bg-navy border border-slate-dark/50 rounded-md p-2 text-sm text-slate-lightest focus:outline-none focus:ring-2 focus:ring-accent-yellow/80">
                         <option>2024-2025</option>
                         <option>2023-2024</option>
                     </select>
                 </div>
                 <div className="flex-1">
                     <label htmlFor="semester" className="block text-xs text-slate mb-1">Học kỳ</label>
-                    <select id="semester" className="w-full bg-navy-light border border-slate-dark/50 rounded-md p-2 text-sm text-slate-lightest focus:outline-none focus:ring-2 focus:ring-accent-yellow/80">
+                    <select id="semester" className="w-full bg-navy border border-slate-dark/50 rounded-md p-2 text-sm text-slate-lightest focus:outline-none focus:ring-2 focus:ring-accent-yellow/80">
                         <option>Học kỳ 1</option>
                         <option>Học kỳ 2</option>
                     </select>
@@ -71,8 +71,8 @@ const BehaviorScore: React.FC = () => {
                 </button>
             </div>
             
-            <div className="bg-navy-light rounded-lg border border-slate-dark/30 overflow-hidden">
-                <div className="grid grid-cols-12 px-4 py-3 bg-navy text-slate-lightest font-bold text-sm">
+            <div className="bg-navy rounded-lg border border-slate-dark/30 overflow-hidden">
+                <div className="grid grid-cols-12 px-4 py-3 bg-navy-dark text-slate-lightest font-bold text-sm">
                     <div className="col-span-1">STT</div>
                     <div className="col-span-7">Nội dung ý kiến đánh giá</div>
                     <div className="col-span-2 text-center">Mức điểm</div>
@@ -89,12 +89,12 @@ const BehaviorScore: React.FC = () => {
                             </div>
                         </li>
                     ))}
-                    <li className="grid grid-cols-12 px-4 py-3 bg-navy/50 font-semibold">
+                    <li className="grid grid-cols-12 px-4 py-3 bg-navy-dark/50 font-semibold">
                         <div className="col-span-8 text-slate-lightest">Tổng điểm đánh giá</div>
                         <div className="col-span-2 text-center"></div>
                         <div className="col-span-2 text-center text-accent-yellow">50</div>
                     </li>
-                     <li className="grid grid-cols-12 px-4 py-3 bg-navy/50 font-semibold">
+                     <li className="grid grid-cols-12 px-4 py-3 bg-navy-dark/50 font-semibold">
                         <div className="col-span-8 text-slate-lightest">Xếp loại</div>
                         <div className="col-span-2 text-center"></div>
                         <div className="col-span-2 text-center text-accent-cyan">Trung bình</div>

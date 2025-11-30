@@ -3,8 +3,8 @@ import { Settings as SettingsIcon, Shield, Bell, Languages } from 'lucide-react'
 
 const Settings: React.FC = () => {
   return (
-    <div className="p-6 lg:p-8 animate-page-transition flex flex-col items-center justify-center h-full text-center">
-      <div className="bg-navy-light p-10 rounded-lg border border-slate-dark/30">
+    <div className="animate-page-transition flex flex-col items-center justify-center h-full text-center">
+      <div className="bg-navy p-10 rounded-lg border border-slate-dark/30">
         <SettingsIcon className="w-16 h-16 text-accent-yellow mx-auto mb-4 animate-spin-slow" />
         <h2 className="text-3xl font-bold text-slate-lightest mb-2">Cài đặt</h2>
         <p className="text-slate max-w-sm">

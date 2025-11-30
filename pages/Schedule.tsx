@@ -20,7 +20,7 @@ const timelineEvents = [
 
 const Schedule: React.FC = () => {
   return (
-    <div className="p-6 lg:p-8 animate-page-transition grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="animate-page-transition grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="lg:col-span-2 space-y-4">
         <div className="flex justify-between items-center">
             <div>
@@ -28,7 +28,7 @@ const Schedule: React.FC = () => {
                  <p className="text-sm text-slate">Đây là lịch học trong tuần của bạn.</p>
             </div>
             <div className="flex space-x-2">
-                <button className="bg-navy-light text-slate-lightest px-4 py-2 rounded-md text-sm font-semibold hover:bg-slate-dark/50 transition">Xuất iCal</button>
+                <button className="bg-navy text-slate-lightest px-4 py-2 rounded-md text-sm font-semibold hover:bg-slate-dark/50 transition">Xuất iCal</button>
                  <button className="bg-accent-yellow text-navy-dark px-4 py-2 rounded-md text-sm font-semibold hover:bg-accent-yellow-dark transition">Nhắc nhở</button>
             </div>
         </div>
@@ -65,10 +65,10 @@ const Schedule: React.FC = () => {
           <ol className="relative border-l-2 border-slate-dark/30 ml-4 flex-grow flex flex-col justify-around">                  
             {timelineEvents.map((event, index) => (
                 <li className="ml-8" key={index}>            
-                    <span className="absolute flex items-center justify-center w-8 h-8 bg-navy rounded-full -left-4 border-2 border-slate-dark/50 ring-4 ring-navy-light">
+                    <span className="absolute flex items-center justify-center w-8 h-8 bg-navy-dark rounded-full -left-4 border-2 border-slate-dark/50 ring-4 ring-navy">
                         <event.icon className={`w-4 h-4 ${event.color}`} />
                     </span>
-                    <div className="bg-navy-light p-4 rounded-lg border border-slate-dark/30 hover:border-accent-yellow/50 transition-all cursor-pointer">
+                    <div className="bg-navy p-4 rounded-lg border border-slate-dark/30 hover:border-accent-yellow/50 transition-all cursor-pointer">
                         <h4 className="font-semibold text-slate-lightest">{event.title}</h4>
                         <p className="text-sm text-slate">{event.date}</p>
                     </div>

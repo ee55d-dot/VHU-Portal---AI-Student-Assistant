@@ -14,7 +14,7 @@ const Grades: React.FC = () => {
     const [activeTab, setActiveTab] = useState('year');
 
     const renderByYear = () => (
-        <div className="bg-navy-light p-6 rounded-lg border border-slate-dark/30">
+        <div className="bg-navy p-6 rounded-lg border border-slate-dark/30">
             <h3 className="text-lg font-bold text-slate-lightest mb-4">Điểm trung bình các học kỳ</h3>
             <div style={{ width: '100%', height: 300 }}>
                 <ResponsiveContainer>
@@ -34,7 +34,7 @@ const Grades: React.FC = () => {
     );
 
     const renderBySemester = () => (
-        <div className="bg-navy-light p-6 rounded-lg border border-slate-dark/30 flex flex-col items-center">
+        <div className="bg-navy p-6 rounded-lg border border-slate-dark/30 flex flex-col items-center">
             <h3 className="text-lg font-bold text-slate-lightest mb-4">Điểm trung bình Học kỳ 2 (2023-2024)</h3>
             <div className="relative" style={{ width: 300, height: 300 }}>
                 <ResponsiveContainer>
@@ -70,15 +70,15 @@ const Grades: React.FC = () => {
     );
 
     return (
-        <div className="p-6 lg:p-8 space-y-8 animate-page-transition">
+        <div className="space-y-8 animate-page-transition">
             <div className="flex justify-between items-center">
                 <div>
                      <div className="flex space-x-1">
-                        <button onClick={() => setActiveTab('year')} className={`px-4 py-2 text-sm font-semibold rounded-md transition ${activeTab === 'year' ? 'bg-accent-yellow text-navy-dark' : 'bg-navy-light text-slate'}`}>Theo năm học</button>
-                        <button onClick={() => setActiveTab('semester')} className={`px-4 py-2 text-sm font-semibold rounded-md transition ${activeTab === 'semester' ? 'bg-accent-yellow text-navy-dark' : 'bg-navy-light text-slate'}`}>Theo học kỳ</button>
+                        <button onClick={() => setActiveTab('year')} className={`px-4 py-2 text-sm font-semibold rounded-md transition ${activeTab === 'year' ? 'bg-accent-yellow text-navy-dark' : 'bg-navy text-slate'}`}>Theo năm học</button>
+                        <button onClick={() => setActiveTab('semester')} className={`px-4 py-2 text-sm font-semibold rounded-md transition ${activeTab === 'semester' ? 'bg-accent-yellow text-navy-dark' : 'bg-navy text-slate'}`}>Theo học kỳ</button>
                     </div>
                 </div>
-                 <div className="text-right bg-navy-light px-4 py-2 rounded-lg">
+                 <div className="text-right bg-navy px-4 py-2 rounded-lg">
                     <p className="text-sm font-medium text-slate">Năm học: 2023-2024</p>
                     <p className="font-bold text-lg text-slate-lightest">GPA: 3.2/4.0 | 8.0/10</p>
                 </div>
@@ -89,21 +89,21 @@ const Grades: React.FC = () => {
             <div>
                 <h3 className="text-xl font-bold text-accent-yellow mb-4">Phân tích từ AI</h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-navy-light p-6 rounded-lg border-t-4 border-accent-cyan">
+                    <div className="bg-navy p-6 rounded-lg border-t-4 border-accent-cyan">
                         <div className="flex items-center mb-2">
                             <TrendingUp className="w-6 h-6 text-accent-cyan mr-3"/>
                             <h4 className="font-bold text-slate-lightest">Tiến độ học tập</h4>
                         </div>
                         <p className="text-sm text-slate">Bạn đang hoàn thành 70% chương trình học kỳ này. Rất tốt!</p>
                     </div>
-                    <div className="bg-navy-light p-6 rounded-lg border-t-4 border-red-500">
+                    <div className="bg-navy p-6 rounded-lg border-t-4 border-red-500">
                         <div className="flex items-center mb-2">
                             <AlertTriangle className="w-6 h-6 text-red-500 mr-3"/>
                             <h4 className="font-bold text-slate-lightest">Dự báo rủi ro</h4>
                         </div>
                          <p className="text-sm text-slate">Nguy cơ trượt môn Toán cao cấp là 40%, nếu không cải thiện điểm chuyên cần.</p>
                     </div>
-                    <div className="bg-navy-light p-6 rounded-lg border-t-4 border-accent-yellow">
+                    <div className="bg-navy p-6 rounded-lg border-t-4 border-accent-yellow">
                         <div className="flex items-center mb-2">
                             <Lightbulb className="w-6 h-6 text-accent-yellow mr-3"/>
                             <h4 className="font-bold text-slate-lightest">Gợi ý học tập</h4>

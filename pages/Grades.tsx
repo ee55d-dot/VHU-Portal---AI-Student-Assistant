@@ -70,7 +70,7 @@ const Grades: React.FC = () => {
     );
 
     return (
-        <div className="space-y-8 animate-page-transition">
+        <div className="p-6 lg:p-8 space-y-8 animate-page-transition">
             <div className="flex justify-between items-center">
                 <div>
                      <div className="flex space-x-1">

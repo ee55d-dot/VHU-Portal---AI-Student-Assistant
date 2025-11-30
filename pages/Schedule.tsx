@@ -20,7 +20,7 @@ const timelineEvents = [
 
 const Schedule: React.FC = () => {
   return (
-    <div className="animate-page-transition grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="p-6 lg:p-8 animate-page-transition grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="lg:col-span-2 space-y-4">
         <div className="flex justify-between items-center">
             <div>

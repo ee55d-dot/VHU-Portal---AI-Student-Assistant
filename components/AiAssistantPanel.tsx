@@ -21,10 +21,10 @@ const AiAssistantPanel: React.FC = () => {
   };
 
   return (
-    <aside className="w-1/4 max-w-sm flex-shrink-0 self-center flex flex-col h-[90vh] m-4 mr-6">
+    <aside className="w-1/4 max-w-sm flex-shrink-0 self-center flex flex-col h-[80vh] m-4 mr-6">
       <div className="relative w-full h-full bg-navy-light/50 backdrop-blur-md rounded-2xl border border-accent-yellow/30 shadow-glow-yellow flex flex-col overflow-hidden">
-        <div className="p-6 border-b border-slate-dark/30 flex flex-col items-center">
-            <div className="relative w-24 h-24 mb-3">
+        <div className="p-5 border-b border-slate-dark/30 flex flex-col items-center">
+            <div className="relative w-20 h-20 mb-2">
                 <div className="absolute inset-0 bg-accent-yellow rounded-full animate-pulse opacity-20"></div>
                 <img src={aiAvatar} alt="AI Assistant Avatar" className="w-full h-full rounded-full object-cover border-2 border-accent-yellow/50" />
             </div>
@@ -43,7 +43,7 @@ const AiAssistantPanel: React.FC = () => {
           ))}
         </div>
 
-        <div className="p-4 mt-auto border-t border-slate-dark/30">
+        <div className="p-3 mt-auto border-t border-slate-dark/30">
           <div className="relative">
             <input
               type="text"
@@ -51,7 +51,7 @@ const AiAssistantPanel: React.FC = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               placeholder="Hỏi trợ lý AI..."
-              className="w-full bg-navy/80 border border-slate-dark rounded-lg pl-4 pr-10 py-2.5 text-sm text-slate-lightest placeholder-slate focus:outline-none focus:ring-2 focus:ring-accent-yellow/80 transition-all"
+              className="w-full bg-navy/80 border border-slate-dark rounded-lg pl-4 pr-10 py-2 text-sm text-slate-lightest placeholder-slate focus:outline-none focus:ring-2 focus:ring-accent-yellow/80 transition-all"
             />
             <button onClick={handleSend} className="absolute inset-y-0 right-0 flex items-center justify-center w-10 text-slate hover:text-accent-yellow transition-colors">
               <Send className="w-5 h-5" />

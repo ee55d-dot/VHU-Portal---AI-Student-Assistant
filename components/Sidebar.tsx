@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutGrid, User, Calendar, BarChart3, Bot, Settings as SettingsIcon, HelpCircle, LogOut } from 'lucide-react';
+import { LayoutGrid, User, Calendar, BarChart3, Bot, Settings as SettingsIcon, HelpCircle, ClipboardCheck } from 'lucide-react';
 
 const navigation = [
   { name: 'Thông tin cá nhân', href: '/profile', icon: User },
@@ -9,11 +9,12 @@ const navigation = [
   { name: 'Gợi ý đăng ký học phần', href: '/dashboard', icon: LayoutGrid },
   { name: 'Kết quả học tập', href: '/grades', icon: BarChart3 },
   { name: 'Trợ lý AI', href: '/ai-assistant', icon: Bot },
+  { name: 'Đánh giá điểm rèn luyện', href: '/behavior-score', icon: ClipboardCheck },
   { name: 'Cài đặt', href: '/settings', icon: SettingsIcon },
 ];
 
 const Sidebar: React.FC = () => {
-  const userAvatar = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiM0RjQ2RTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlciwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiBkeT0iLjA1ZW0iPkI8L3RleHQ+PC9zdmc+";
+  const userAvatar = "https://img.icons8.com/fluency/96/user-male-circle.png";
 
   return (
     <aside className="w-64 bg-navy-light flex-shrink-0 flex flex-col justify-between p-4 border-r border-slate-dark/20">

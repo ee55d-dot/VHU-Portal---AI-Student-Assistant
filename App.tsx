@@ -10,6 +10,7 @@ import Schedule from './pages/Schedule';
 import Grades from './pages/Grades';
 import AiChat from './pages/AiChat';
 import Settings from './pages/Settings';
+import BehaviorScore from './pages/BehaviorScore';
 
 const App: React.FC = () => {
   return (
@@ -17,9 +18,9 @@ const App: React.FC = () => {
       <div className="flex h-screen bg-navy text-slate-light overflow-hidden">
         <Sidebar />
         <div className="flex-1 flex min-w-0"> {/* Wrapper for main content and AI panel */}
-          <div className="flex-grow flex flex-col h-screen overflow-y-auto">
+          <div className="flex-grow flex flex-col h-screen overflow-y-auto no-scrollbar">
             <Header />
-            <main className="flex-grow p-6 lg:p-8">
+            <main className="flex-grow">
               <Routes>
                 <Route path="/" element={<Navigate to="/profile" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />
@@ -27,6 +28,7 @@ const App: React.FC = () => {
                 <Route path="/schedule" element={<Schedule />} />
                 <Route path="/grades" element={<Grades />} />
                 <Route path="/ai-assistant" element={<AiChat />} />
+                <Route path="/behavior-score" element={<BehaviorScore />} />
                 <Route path="/settings" element={<Settings />} />
               </Routes>
             </main>

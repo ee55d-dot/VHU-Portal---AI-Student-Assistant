@@ -5,8 +5,8 @@ import { User, Cake, BookOpen, Building, Mail, CreditCard, Users, Binary, Clipbo
 const Profile: React.FC = () => {
   const profileData = {
     name: "VÕ VĂN QUỐC BẢO",
-    major: "Thương mại điện tử",
-    avatar: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiM0RjQ2RTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlciwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiBkeT0iLjA1ZW0iPkI8L3RleHQ+PC9zdmc+",
+    major: "Công nghệ thông tin",
+    avatar: "https://img.icons8.com/fluency/96/user-male-circle.png",
     studentId: "231A290036",
     dob: "01/01/2005 (Tuổi: 19)",
     class: "23ITTMDT1011",
@@ -61,7 +61,7 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <div className="animate-page-transition grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="p-6 lg:p-8 animate-page-transition grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="lg:col-span-1 flex flex-col items-center bg-navy-light p-8 rounded-lg border border-slate-dark/30">
         <div className="relative mb-4">
           <img src={profileData.avatar} alt="Student Avatar" className="w-32 h-32 rounded-full border-4 border-accent-yellow/50" />

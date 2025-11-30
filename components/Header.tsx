@@ -9,13 +9,14 @@ const pageTitles: { [key: string]: string } = {
   '/schedule': 'Lịch học & Sự kiện',
   '/grades': 'Kết quả học tập',
   '/ai-assistant': 'Trợ lý AI',
+  '/behavior-score': 'Đánh giá điểm rèn luyện',
   '/settings': 'Cài đặt',
 };
 
 const Header: React.FC = () => {
   const location = useLocation();
   const title = pageTitles[location.pathname] || 'Thông tin cá nhân';
-  const userAvatar = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiM0RjQ2RTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlciwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiBkeT0iLjA1ZW0iPkI8L3RleHQ+PC9zdmc+";
+  const userAvatar = "https://img.icons8.com/fluency/96/user-male-circle.png";
 
   return (
     <header className="flex-shrink-0 bg-navy/80 backdrop-blur-sm border-b border-slate-dark/20 h-20 flex items-center justify-between px-6 lg:px-8 sticky top-0 z-10">

@@ -41,7 +41,7 @@ const curriculum = [
 
 const Dashboard: React.FC = () => {
     return (
-        <div className="space-y-10 animate-page-transition">
+        <div className="p-6 lg:p-8 space-y-10 animate-page-transition">
             <div>
                 <h2 className="text-2xl font-bold text-slate-lightest mb-1">Chào mừng trở lại, BẢO!</h2>
                 <p className="text-slate">Đây là những gợi ý đăng ký học phần dành riêng cho bạn.</p>

@@ -2,10 +2,22 @@ import React from 'react';
 import { Clock, MapPin, Bot, Users, Code, BrainCircuit } from 'lucide-react';
 
 const weeklySchedule = [
-  { day: 'Thứ 2', date: '04/11', classes: [] },
-  { day: 'Thứ 3', date: '05/11', classes: [{ name: 'Kinh tế vĩ mô', time: '9:00 - 11:30', location: 'A201', color: 'bg-teal-500/10 border-teal-400 text-teal-300' }] },
-  { day: 'Thứ 4', date: '06/11', classes: [{ name: 'Lập trình Web', time: '7:30 - 10:00', location: 'C301', color: 'bg-blue-500/10 border-blue-400 text-blue-300' }] },
-  { day: 'Thứ 5', date: '07/11', classes: [] },
+  { day: 'Thứ 2', date: '04/11', classes: [{ name: 'Cấu trúc dữ liệu & giải thuật', time: '13:00 - 15:30', location: 'D501', color: 'bg-pink-500/10 border-pink-400 text-pink-300' }] },
+  { day: 'Thứ 3', date: '05/11', classes: [
+      { name: 'Kinh tế vĩ mô', time: '9:00 - 11:30', location: 'A201', color: 'bg-teal-500/10 border-teal-400 text-teal-300' },
+      { name: 'An toàn thông tin', time: '18:00 - 20:30', location: 'C102', color: 'bg-red-500/10 border-red-400 text-red-300' }
+    ]
+  },
+  { day: 'Thứ 4', date: '06/11', classes: [
+      { name: 'Lập trình Web', time: '7:30 - 10:00', location: 'C301', color: 'bg-blue-500/10 border-blue-400 text-blue-300' },
+      { name: 'Mạng máy tính', time: '14:00 - 16:30', location: 'B202', color: 'bg-green-500/10 border-green-400 text-green-300' }
+    ]
+  },
+  { day: 'Thứ 5', date: '07/11', classes: [
+      { name: 'Hệ điều hành', time: '8:00 - 10:30', location: 'F101', color: 'bg-orange-500/10 border-orange-400 text-orange-300' },
+      { name: 'Cơ sở dữ liệu', time: '13:00 - 15:30', location: 'E303', color: 'bg-yellow-500/10 border-yellow-400 text-yellow-300' }
+    ]
+  },
   { day: 'Thứ 6', date: '08/11', classes: [{ name: 'Lập trình', time: '13:00 - 15:30', location: 'B105', color: 'bg-indigo-500/10 border-indigo-400 text-indigo-300' }] },
   { day: 'Thứ 7', date: '09/11', classes: [{ name: 'Tiếng Anh chuyên ngành', time: '8:00 - 10:30', location: 'F402', color: 'bg-purple-500/10 border-purple-400 text-purple-300' }] },
   { day: 'Chủ nhật', date: '10/11', classes: [] },
